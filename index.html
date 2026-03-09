@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kamehn Enterprise</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header>
+<h2>The Kamehn Enterprise Ruiru</h2>
+
+<input class="search-box" id="searchInput" onkeyup="searchProducts()" placeholder="Search products...">
+
+<nav>
+<a onclick="showHome()">Home</a>
+<a onclick="openCart()"><div id="floatingCart">🛒 <span id="cartCount" class="cart-badge">0</span></div></a>
+<a id="loginBtn" onclick="showLogin()">Login</a>
+<a id="registerBtn" onclick="showRegister()">Register</a>
+<a id="adminLink" class="hidden" href="admin_dashboard.html">Admin</a>
+<a id="logoutBtn" class="hidden" onclick="logout()">Logout</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Construction & Water Storage Products</h2>
+<p>Glass Panels • Water Tanks • Plastic Containers</p>
+</section>
+
+<div class="container">
+
+<div class="categories">
+<h3>Categories</h3>
+<ul>
+<li onclick="filterCategory('all')">All Products</li>
+<li onclick="filterCategory('glass')">Glass Panels</li>
+<li onclick="filterCategory('tanks')">Water Tanks</li>
+<li onclick="filterCategory('containers')">Plastic Containers</li>
+</ul>
+</div>
+
+<div class="products" id="productList">
+
+<div class="product-card" data-category="glass">
+<img src="tempered.jpg">
+<h4>Tempered Glass Panels</h4>
+<p class="price">KSH 1000</p>
+<button onclick="addToCart('Tempered Glass Panels',1000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Clear Tempered.jpg">
+<h4>Clear Tempered Glass Panels</h4>
+<p class="price">KSH 1000</p>
+<button onclick="addToCart('Clear Tempered Glass Panels',1000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Tinted Tempered Glass.jpg">
+<h4>Tinted Tempered Glass Panels</h4>
+<p class="price">KSH 1000</p>
+<button onclick="addToCart('Tinted Tempered Glass Panels',1000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Curved.jpg">
+<h4>Curved Glass Panels</h4>
+<p class="price">KSH 1000</p>
+<button onclick="addToCart('Curved Glass Panels',1000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Insulated Glass.jpg">
+<h4>Insulated Glass</h4>
+<p class="price">KSH 3000</p>
+<button onclick="addToCart('Insulated Glass',3000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Jumbo Size Tempered Glass.jpg">
+<h4>Jumbo Size Tempered Glass</h4>
+<p class="price">KSH 3000</p>
+<button onclick="addToCart('Jumbo Size Tempered Glass',3000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Ultra Clear.jpg">
+<h4>Ultra Clear Glass</h4>
+<p class="price">KSH 3000</p>
+<button onclick="addToCart('Ultra Clear Glass',3000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Shower Glass.jpg">
+<h4>Shower Glass</h4>
+<p class="price">KSH 3000</p>
+<button onclick="addToCart('Shower Glass',3000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Frameless Glass.jpg">
+<h4>Frameless Glass</h4>
+<p class="price">KSH 3000</p>
+<button onclick="addToCart('Frameless Glass',3000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="thickglass.jpg">
+<h4>Colored Glass Sheets</h4>
+<p class="price">KSH 8000</p>
+<button onclick="addToCart('Colored Glass Sheets',8000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Laminated Glass.jpg">
+<h4>Laminated Glass</h4>
+<p class="price">KSH 8000</p>
+<button onclick="addToCart('Laminated Glass',8000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Frosted.jpg">
+<h4>Frosted Glass</h4>
+<p class="price">KSH 8000</p>
+<button onclick="addToCart('Frosted Glass',8000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Tinted.jpg">
+<h4>Tinted Glass</h4>
+<p class="price">KSH 8000</p>
+<button onclick="addToCart('Tinted Glass',8000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Mirror-Coated.jpg">
+<h4>Mirror-Coated Glass</h4>
+<p class="price">KSH 8000</p>
+<button onclick="addToCart('Mirror-Coated Glass',8000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Reflective .jpg">
+<h4>Reflective Glass</h4>
+<p class="price">KSH 8000</p>
+<button onclick="addToCart('Reflective Glass',8000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="glass">
+<img src="Cut-to-Size Clear Float Glass.jpg">
+<h4>Cut-to-Size Clear Float Glass</h4>
+<p class="price">KSH 8000</p>
+<button onclick="addToCart('Cut-to-Size Clear Float Glass',8000)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="containers">
+<img src="plastic.jpg">
+<h4>Industrial Plastic Container</h4>
+<p class="price">KSH 900</p>
+<button onclick="addToCart('Industrial Plastic Container',900)">Add to Cart</button>
+</div>
+
+
+<div class="product-card" data-category="tanks">
+<img src="tank.jpg">
+<h4>5000L Water Tank</h4>
+<p class="price">KSH 350</p>
+<button onclick="addToCart('5000L Water Tank',350)">Add to Cart</button>
+</div>
+
+<div class="product-card" data-category="tanks">
+<img src="watertank.jpg">
+<h4>10000L Water Tank</h4>
+<p class="price">KSH 600</p>
+<button onclick="addToCart('10000L Water Tank',600)">Add to Cart</button>
+</div>
+
+</div>
+</div>
+
+<div class="checkout-box hidden" id="cartPage">
+<h3>Your Cart</h3>
+<div id="cartItems"></div>
+<h3 id="cartTotal"></h3>
+<button onclick="proceedCheckout()">Proceed to Checkout</button>
+</div>
+
+<div class="auth hidden" id="loginBox">
+<h3>User Login</h3>
+<input id="loginEmail" placeholder="Email">
+<input id="loginPass" type="password" placeholder="Password">
+<button onclick="loginUser()">Login</button>
+</div>
+
+<div class="auth hidden" id="registerBox">
+<h3>Register</h3>
+<input id="regName" placeholder="Name">
+<input id="regEmail" placeholder="Email">
+<input id="regPass" type="password" placeholder="Password">
+<button onclick="registerUser()">Register</button>
+</div>
+
+<!-- Image Zoom Viewer -->
+<div class="image-modal" id="imageModal">
+  <img id="modalImage" src="" />
+</div>
+
+<section id="checkoutPage" style="display:none;padding:30px;">
+<h2>🧾 Checkout</h2>
+<form id="checkoutForm">
+<input type="text" name="fullName" placeholder="Full Name" required class="input-field"><br><br>
+<input type="email" name="checkoutEmail" placeholder="Email" required class="input-field"><br><br>
+<input type="text" name="phone" placeholder="Phone Number" required class="input-field"><br><br>
+<input type="text" name="address" placeholder="Delivery Address" required class="input-field"><br><br>
+
+<select id="paymentMethod" class="input-field">
+<option value="mpesa">M‑Pesa</option>
+<option value="card">Credit / Debit Card</option>
+<option value="bank">Bank Transfer</option>
+</select>
+<br><br>
+
+<button type="submit" class="btn-primary">💳 Pay Now</button>
+</form>
+</section>
+
+<!-- Order Tracking Page -->
+<section id="trackingPage" style="display:none;padding:30px;">
+<h2>📦 Track Your Order</h2>
+
+<input type="text" id="trackOrderId" placeholder="Enter Order ID" class="input-field">
+
+<button onclick="trackOrder()" class="btn-primary">Track Order</button>
+
+<div id="orderStatus" style="margin-top:20px;font-size:18px;"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
