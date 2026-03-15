@@ -97,3 +97,20 @@ button{padding:8px 15px;border:none;background:#0a4dff;color:white;border-radius
  cursor:pointer;
  box-shadow:0 5px 20px rgba(0,0,0,0.3);
 }
+.whatsapp{
+position:fixed;
+bottom:80px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50px;
+cursor:pointer;
+text-decoration:none;
+}
+
+.email{
+color: red;
+cursor: pointer;
+text-decoration: underline;
+}
